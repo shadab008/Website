@@ -1,0 +1,97 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Nunito-Regular.ttf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: myFirstFont;
+    color: #000000;
+}
+#header{
+    background: #01ac68;
+    clear: both;
+    overflow: auto;
+    padding: 8px 60px; 
+    padding-bottom: 0; 
+}
+#header nav {
+    float: right;
+}
+#header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+#header li {
+    display: inline-block;
+    padding: 10px 5px;
+    position: relative;
+}
+#header a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    z-index: 6;
+    position: relative;
+}
+
+#header li.active {
+    background: #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+#header li.active a{
+    color: #01ac68;
+}
+#header li.active span {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    content: " ";
+    right: 100%;
+    width: 25px;
+    background: #fff;
+    height: 25px;
+    padding: 0 1px;
+}
+#header li.active span.left {
+    left: -25px;
+}
+#header li.active span.right {
+    right: -25px;
+}
+#header li.active span::before {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    content: " ";
+    width: 50px;
+    background: #01ac68;
+    height: 50px;
+}
+#header li.active span.right::before {
+    border-radius: 50%;
+    right: -25px;
+}
+#header li.active span.left::before {
+    border-radius: 50%;
+    left: -25px;
+}
+
+.wrpper{
+    padding: 0 15px;
+}
+.marquee ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+}
+.marquee ul li{
+    padding: 0 10px;
+}
